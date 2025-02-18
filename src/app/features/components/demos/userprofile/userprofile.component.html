@@ -1,0 +1,13 @@
+<div class="container">
+    @if(editable){
+        <input type="text" [value]="name()" (change)="TextChanged($event)">
+        <button  (click)="LeaveEditMode()" >
+            <mat-icon>save</mat-icon>
+        </button>
+    }
+    @else{
+        <p>{{name()}}</p><button (click)="EnterEditMode()">
+            <mat-icon>edit</mat-icon></button>
+    }
+    <app-userpicture [imgUrl]="imgUrl()"></app-userpicture>
+</div>

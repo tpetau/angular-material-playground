@@ -1,0 +1,13 @@
+<p>pipeline works!</p>
+
+<h2>Time To Minutes Pipeline</h2>
+<section style="display: flex;flex-direction: row; gap:10px;">
+    <mat-form-field style="width: 100px;">
+        <mat-label>Input</mat-label>
+        <input type="time" matInput [(ngModel)]="timeStr">
+    </mat-form-field>
+   <mat-form-field style="width: 100px;">
+    <mat-label>Result</mat-label>
+    <input matInput readonly="true" [value]="timeStr | timeToMinutes" >
+   </mat-form-field>
+</section>

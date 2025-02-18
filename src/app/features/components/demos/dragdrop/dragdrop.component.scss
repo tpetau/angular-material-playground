@@ -1,0 +1,9 @@
+.dropzone{
+    height: 200px;
+    width: 200px;
+    border: 1px dotted black;
+    border-radius: 10px;
+}
+.dropzone.is-dragover{
+    background-color: lime;
+}
