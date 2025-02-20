@@ -2,12 +2,12 @@
 
 <h2>Time To Minutes Pipeline</h2>
 <section style="display: flex;flex-direction: row; gap:10px;">
-    <mat-form-field style="width: 100px;">
-        <mat-label>Input</mat-label>
-        <input type="time" matInput [(ngModel)]="timeStr">
-    </mat-form-field>
-   <mat-form-field style="width: 100px;">
-    <mat-label>Result</mat-label>
-    <input matInput readonly="true" [value]="timeStr | timeToMinutes" >
-   </mat-form-field>
+    <div style="display: flex;flex-direction: column;">
+        <label for="timeInput">Input</label>
+        <input type="time" timeInput [value]="timeStr" (change)="onChange($event)">
+    </div>
+    <div style="display:flex; flex-direction: column;">
+        <label for="pipelineInput">Result</label>
+        <input pipelineInput readonly="true" [value]="timeStr | timeToMinutes">
+    </div>
 </section>

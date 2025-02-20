@@ -1,21 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { MatInputModule } from '@angular/material/input';
 import { TimeToMinutesPipe } from './timetominutes.pipe';
 @Component({
   selector: 'app-pipeline',
   imports: [
-    FormsModule,
-    MatInputModule,
     TimeToMinutesPipe],
   templateUrl: './pipeline.component.html',
   styleUrl: './pipeline.component.scss'
 })
 export class PipelineComponent implements OnInit {
 
-  timeStr!: string;
+
+  timeStr:string = "10:23";
+
+  onChange($event: Event) {
+    const inputElem = $event.target as HTMLInputElement;
+    this.timeStr = inputElem.value;
+    }
 
   ngOnInit(): void {
-    this.timeStr = "10:23";
+    //this.timeStr = "10:23";
   }
 }
