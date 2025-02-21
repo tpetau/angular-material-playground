@@ -1,5 +1,7 @@
 <div class="container">
-<img  [src]="imgUrl()">
-<!-- <label for="profilePicture">Bild hochladen</label> -->
-<input #profilePicture type="file" (change)="ChangeProfileImg(profilePicture.files)">
+    <img [src]="imgUrl()">
+    <label for="profilePicture" class="file-upload-overlay" (click)="profilePicture.click()">
+        <span>Bild hochladen</span>
+    </label>
+    <input #profilePicture type="file" (change)="ChangeProfileImg(profilePicture.files)">
 </div>

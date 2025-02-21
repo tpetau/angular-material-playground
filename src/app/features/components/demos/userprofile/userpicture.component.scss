@@ -10,3 +10,17 @@
   width: 200px;
   object-fit: scale-down;
 }
+
+input[type="file"]{
+  display: none;
+}
+
+.file-upload-overlay {
+  text-align: center;
+  color: #fff;
+  background-color: rgb(71, 118, 245);
+  border-radius: 5px;
+  padding: 6px 12px;
+  cursor: pointer;
+  width: 300px;
+}
