@@ -7,7 +7,7 @@ import { DialogComponent } from "./components/dialog/dialog.component";
 
 @Component({
   selector: 'app-dialogs',
-  imports: [ModalComponent, DialogComponent, PortalModule],
+  imports: [ModalComponent, PortalModule],
   templateUrl: './dialogs.component.html',
   styleUrl: './dialogs.component.scss',
   providers: [{ provide: OverlayContainer, useClass: FullscreenOverlayContainer }]

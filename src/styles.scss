@@ -1,4 +1,13 @@
+@use "./app/theme/colors";
+
 /* You can add global styles to this file, and also import other style files */
+// $palette: (
+//     blue: #22678C,
+//     lightBlue: #23778F,
+//     lighterBlue: #48525C,
+//     yellow: #ffa949,
+//     lightYellow: #eda2fd
+// );
 
 html,
 body {
@@ -10,4 +19,21 @@ body {
 }
 button {
   height: 36px;
+  background-color: colors.$primary-color;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+button:hover {
+  background-color: colors.$secondary-color;
+}
+
+details {
+  margin-top: 10px;
+  cursor: pointer;
+  summary {
+    color: colors.$secondary-color;
+    margin-bottom: 10px;
+  }
 }

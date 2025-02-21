@@ -1,24 +1,27 @@
+@use "../../theme/colors";
+
 nav {
   height: 50px;
   display: flex;
   justify-content: center;
   border-bottom: 1px solid black;
-}
+  background-color: colors.$secondary-color;
 
-ul {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-ul li {
-  list-style: none;
-  text-transform: capitalize;
-  transition: transform 0.2s;
-}
-ul li:hover {
-  transform: scale(1.2);
-}
-ul li a {
-  text-decoration: none;
-  color: black;
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+  li {
+    list-style: none;
+    text-transform: capitalize;
+    transition: transform 0.2s;
+  }
+  li:hover {
+    transform: scale(1.2);
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
 }
