@@ -1,3 +1,15 @@
-<div class="dropzone" #dropZone (dragover)="DragOver($event)" (dragleave)="DragLeave($event)" (drop)="Drop($event)">
-    <p>Drop Files in this Zone</p>
+<div style="display:flex; flex-direction:row; gap:20px; ">
+    <div>
+        <label>Component</label>
+        <div class="dropzone" #dropZone (dragover)="DragOver($event)" (dragleave)="DragLeave($event)"
+            (drop)="Drop($event)">
+            <p>Drop Files in this Zone</p>
+        </div>
+    </div>
+    <div>
+        <label>Logs</label>
+        <div>
+            <textarea readonly #dragDropLog style="height: 200px; width: 300px;"></textarea>
+        </div>
+    </div>
 </div>

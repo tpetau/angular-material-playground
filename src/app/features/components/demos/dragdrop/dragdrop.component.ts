@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-dragdrop',
@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class DragdropComponent {
 
-
+  @ViewChild("dragDropLog") dragDropLogElem!: ElementRef;
 
   Drop($event: DragEvent) {
     console.log("Drop");
@@ -20,7 +20,9 @@ export class DragdropComponent {
     }
 
     for (let i = 0; i < files.length; i++) {
-      console.log(files[i].name);
+
+      this.dragDropLogElem.nativeElement.value =
+        this.dragDropLogElem.nativeElement.value + files[i].name + "\n";
     }
 
     ($event.target as HTMLElement).classList.remove("is-dragover");
