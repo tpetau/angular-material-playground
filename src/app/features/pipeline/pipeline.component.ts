@@ -7,7 +7,7 @@ import { TimeToMinutesPipe } from './timetominutes.pipe';
   templateUrl: './pipeline.component.html',
   styleUrl: './pipeline.component.scss'
 })
-export class PipelineComponent implements OnInit {
+export class PipelineComponent {
 
 
   timeStr:string = "10:23";
@@ -16,8 +16,4 @@ export class PipelineComponent implements OnInit {
     const inputElem = $event.target as HTMLInputElement;
     this.timeStr = inputElem.value;
     }
-
-  ngOnInit(): void {
-    //this.timeStr = "10:23";
-  }
 }
